@@ -28,7 +28,7 @@
         </button>
         <div class="collapse show" id="documents-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <?php include("root/directorisL.php");?>  
+          <?php include("directorisL.php");?>  
           </ul>
         </div>
       </li>

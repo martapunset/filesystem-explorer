@@ -1,6 +1,6 @@
 <?php
 
-$path = __DIR__;
+$path = "root";
 if ($fh = opendir($path)){
     while(($entry = readdir($fh)) !== false) {
         if ($entry != "." && $entry != ".."){
