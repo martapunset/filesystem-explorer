@@ -22,17 +22,17 @@
       <span class="fs-5 fw-semibold">FILE SYSTEM EXPLORER</span>
     </a>
     <ul class="list-unstyled ps-0">
-    
-        
-        <div class="collapse show" id="hom-collapse">
+      <li class="mb-1">
+      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#documents-collapse" aria-expanded="false">
+          Documents
+        </button>
+        <div class="collapse show" id="documents-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-             <li class="mb-1"><?php include("directorisL.php");?></li>
-          
-           
+          <?php include("directorisL.php");?>  
           </ul>
         </div>
-     
-      
+      </li>
+    </ul>
   </div>
 
   

@@ -1,12 +1,21 @@
 <?php
 
+function isFolder($entry){
+
+
+
+}
+
 $path = "ROOT";
 if ($fh = opendir($path)){
     while(($entry = readdir($fh)) !== false) {
-        if ($entry != "." && $entry != ".."){
+        $thisEntry=$path . DIRECTORY_SEPARATOR . $entry;
+        if ($entry != "." && $entry != ".." && is_dir($thisEntry)==true){
+          
             ?>
             <div>
-                <button class='btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed' data-bs-toggle='collapse' data-bs-target='#home-collapse' aria-expanded='false'><?php echo $entry?></button></div>
+                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"><?php echo $entry ?></a></li>
+                
            <?php
         }
     }
