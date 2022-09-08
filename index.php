@@ -21,22 +21,68 @@
       
       <span class="fs-5 fw-semibold">FILE SYSTEM EXPLORER</span>
     </a>
-    <ul class="list-unstyled ps-0">
-      <li class="mb-1">
-      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#documents-collapse" aria-expanded="false">
-          Documents
-        </button>
+    <ul class="list-unstyled ps-0 dir-list">
+      <li><button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add files</button></li>
+     
+        
+  
+      <!--<button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#documents-collapse" aria-expanded="false">
+      
+        </button> -->
+        <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"  href="openFiles.php?name=ROOT" data-bs-toggle="collapse" data-bs-target="#documents-collapse" aria-expanded="false">ROOT</a>
         <div class="collapse show" id="documents-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+
           <?php include("directorisL.php");?>  
+
           </ul>
         </div>
-      </li>
+     
     </ul>
   </div>
+ 
 
-  
 </main>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Create folder</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form action="createDir.php" method="post">
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Folder Name</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" name="folder-name">
+             </div>
+             <div class="modal-footer">
+
+      <button type="submit" class="btn btn-primary">Create folder</button>
+     
+    </div>
+    
+
+
+      <div class="custom-file">
+       <input type="file" class="custom-file-input">
+     <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+     </div>
+
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Add File</button>
+     
+    </div>
+    </form>
+  </div>
+</div>
+</div>"
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

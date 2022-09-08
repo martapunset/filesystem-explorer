@@ -1,10 +1,7 @@
 <?php
 
-function isFolder($entry){
 
 
-
-}
 
 $path = "ROOT";
 if ($fh = opendir($path)){
@@ -13,8 +10,8 @@ if ($fh = opendir($path)){
         if ($entry != "." && $entry != ".." && is_dir($thisEntry)==true){
           
             ?>
-            <div>
-                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"><?php echo $entry ?></a></li>
+          
+                <li><a href='openFiles.php?name=<?php echo $thisEntry?>' class="link-dark d-inline-flex text-decoration-none rounded"><?php echo $entry ?></a></li>
                 
            <?php
         }
