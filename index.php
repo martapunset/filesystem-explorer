@@ -55,6 +55,7 @@
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 
                         <?php include("directoriesL.php");?>
+                      
 
                     </ul>
                 </div>
@@ -96,12 +97,13 @@
                         <div class="mb-3">
                           <!--Select dropdown-->
                         <label for="formGroupExampleInput" class="form-label">Select folder</label>
-                        <select name="carpeta" class="form-select" aria-label="Default select example" form="createItems">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
+                        <?php include("selectFolders.php");?>
+                        
+
+
   <option value="2">Two</option>
   <option value="3">Three</option>
-</select>
+
                             <label for="formGroupExampleInput" class="form-label">Folder Name</label>
                             <input type="text" class="form-control" id="formGroupExampleInput"
                                 placeholder="Example input placeholder" name="folder-name">
