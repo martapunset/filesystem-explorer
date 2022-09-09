@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Ezequiel Zvirgzdins, Marta Punset">
-
+    <script src="https://kit.fontawesome.com/0ab380fc49.js" crossorigin="anonymous"></script>
     <title>File Explorer</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,7 +15,22 @@
     <link href="sidebars.css" rel="stylesheet">
 
 </head>
-
+<header>
+<nav class="mx-4 bg-light py-2 pt-4">
+  <div class="d-flex mb-3 ">
+  <form class="d-flex me-auto " role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    <a class="me-4 fs-4 "><i class="fa-solid fa-trash text-secondary"></i></a>
+    <a class="fs-4 "><i class="fa-regular fa-file"></i></a>
+    
+   
+      
+    </div>
+  </div>
+</nav>
+</header>
 <body>
 
     <main class="d-flex align-items-stretch w-100 p-3">
