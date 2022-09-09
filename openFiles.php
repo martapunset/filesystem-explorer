@@ -24,7 +24,7 @@ if(isset($_GET['name']) ){
             } 
         }
     }
-}else
+}else{
 
 //read files
 
@@ -32,7 +32,7 @@ echo "contenido archivo";
 
 
 }
-
+}
 
 
 
