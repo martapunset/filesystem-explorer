@@ -66,10 +66,10 @@
         <!-- dashboard-->
 
         <div class=" my-3 mh-100 bg-body rounded shadow-sm container-xl">
-            <div class="border-bottom pb-2 mb-0 d-flex justify-content-between">
-                <h6>File</h6>
-                <h6>Size</h6>
-                <h6>Modified</h6>
+            <div class="border-bottom pb-2 mb-0 row ">
+                <h6 class="col text-start">File</h6>
+                <h6 class="col text-center">Size</h6>
+                <h6 class="col text-end">Modified</h6>
             </div>
             <?php require_once("openFiles.php");?>
         </div>
