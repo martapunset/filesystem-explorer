@@ -1,5 +1,6 @@
 <?php
 
+   $url=$_SESSION["newsession"];
 $openFile = fopen($url, "r");
 
 while(!feof($openFile)){
@@ -11,7 +12,7 @@ while(!feof($openFile)){
     
     // (A) GET IMAGE INFO
     
-    $fileData = exif_read_data($thisEntry);
+    $fileData = exif_read_data($url);
      
     // (B) OUTPUT HTTP HEADERS
     header("Content-Type: " . $fileData["MimeType"]);
