@@ -1,5 +1,9 @@
 <?php
 require_once("index.php");
+
+function openFolder (){
+
+
 if(isset($_GET['name']) ){
 
     $url=$_GET['name'];  
@@ -29,7 +33,7 @@ if(isset($_GET['name']) ){
 
 //read files
 
-echo "contenido archivo";
+echo "alosfdlkansf";
 
 
 }
@@ -37,8 +41,7 @@ echo "contenido archivo";
 
 
 
+}
 
 
-
-   
 

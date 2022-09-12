@@ -17,7 +17,6 @@ if ($fh = opendir($path)){
     }
 
 }
-dirList($thisEntry);
 
 
 

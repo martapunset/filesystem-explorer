@@ -13,6 +13,10 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <link href="sidebars.css" rel="stylesheet">
+    
+    <?php  require_once("openFolder.php");?>
+    <?php require_once("directoriesL.php");?>
+
 
 </head>
 <header>
@@ -24,9 +28,6 @@
       </form>
     <a class="me-4 fs-4 "><i class="fa-solid fa-trash text-secondary"></i></a>
     <a class="fs-4 "><i class="fa-regular fa-file"></i></a>
-    
-   
-      
     </div>
   </div>
 </nav>
@@ -54,8 +55,7 @@
                 <div class="collapse show" id="documents-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 
-                        <?php include("directoriesL.php");?>
-                      
+                      <?php dirList($thisEntry);?>
 
                     </ul>
                 </div>
@@ -72,7 +72,10 @@
                 <h6 class="col text-center">Size</h6>
                 <h6 class="col text-end">Modified</h6>
             </div>
-            <?php require_once("openFiles.php");?>
+            <?php
+            openFolder();
+            
+            ?>
         </div>
 
 
@@ -101,8 +104,7 @@
                         
 
 
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+ 
 
                             <label for="formGroupExampleInput" class="form-label">Folder Name</label>
                             <input type="text" class="form-control" id="formGroupExampleInput"
