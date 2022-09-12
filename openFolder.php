@@ -32,16 +32,16 @@ if(isset($_GET['name']) ){
 }else{
 
 //read files
-
-echo "alosfdlkansf";
-
+include("openFiles.php");
 
 }
 }
-
-
-
 }
+
+
+
+
+
 
 
 
