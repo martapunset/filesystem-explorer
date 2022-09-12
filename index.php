@@ -14,9 +14,16 @@
 
     <link href="sidebars.css" rel="stylesheet">
     
-    <?php  require_once("openFolder.php");?>
-    <?php require_once("directoriesL.php");?>
-
+    <?php 
+    session_start();
+   
+ 
+    require_once("openFolder.php");
+     require_once("directoriesL.php");
+   include("selectFolders.php");
+   //include("updatesession.php")
+    //$_SESSION["newsession"]=$thisEntry;
+    ?>
 
 </head>
 <header>
@@ -26,6 +33,7 @@
         <input class="form-control me-2" id="search" name="search" type="text" placeholder="Type here">
         <input class="btn btn-outline-success" id="submit" type="submit" value="search"></input>
       </form>
+      <h4 class="text-center"><?php echo actualSession($_SESSION["newsession"]);?></h4>
     <a class="me-4 fs-4 "><i class="fa-solid fa-trash text-secondary"></i></a>
     <a class="fs-4 "><i class="fa-regular fa-file"></i></a>
     </div>
@@ -39,7 +47,7 @@
         <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
             <a href="" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
 
-                <span class="fs-5 fw-semibold">FILE SYSTEM EXPLORER</span>
+                <span class="fs-5 fw-semibold">FILE SYSTEM EXPLORER </span>
             </a>
             <ul class="list-unstyled ps-0 dir-list">
                 <li><button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
@@ -96,19 +104,16 @@
                 </div>
                 <div class="modal-body">
 
-                    <form action="createDir.php" method="post" id="createItems">
+                    <form action="createDir.php" method="get" id="createItems">
                         <div class="mb-3">
                           <!--Select dropdown-->
-                        <label for="formGroupExampleInput" class="form-label">Select folder</label>
-                        <?php include("selectFolders.php");?>
-                        
-
-
- 
+                     
+                    
 
                             <label for="formGroupExampleInput" class="form-label">Folder Name</label>
                             <input type="text" class="form-control" id="formGroupExampleInput"
-                                placeholder="Example input placeholder" name="folder-name">
+                                placeholder="folder namer" name="folder-name">
+                             
                         </div>
                         <div class="modal-footer">
 
@@ -124,13 +129,13 @@
                         </div>
 
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add File</button>
+                       </div>
+                         <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add File</button>
 
-                </div>
-                </form>
+                          </div>
+                     </form>
             </div>
         </div>
     </div>

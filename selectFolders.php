@@ -1,3 +1,10 @@
+
+
+
+<?php
+ 
+function selectFolders(){
+?>
 <select name="carpeta" class="form-select" aria-label="Default select example" form="createItems">
   <option selected>Open this select menu</option>
   
@@ -25,8 +32,9 @@ if(isset($_GET['name']) ){
 }
     ?>
     </select>
-
-
+   <?php
+}
+?>
 
 
 
