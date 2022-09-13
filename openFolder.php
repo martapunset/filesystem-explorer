@@ -40,8 +40,10 @@ function openFolder (){
               <p class="col text-end"><?php echo date("F d Y H:i:s", 
                               filemtime($thisEntry2));
                               
-     ?></p>
-            </div>
+                              ?>                       
+
+     <a href='deleteFiles.php?name=<?php echo $thisEntry2 ?>' class="me-4 mx-4 fs-6 "><i class="fa-solid fa-trash text-secondary"></i></a></p>
+     </div>
           </div>
         </div>           
                <?php    
