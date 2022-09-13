@@ -38,7 +38,7 @@ function openFolder (){
               <a class="text-gray-dark col" href="index.php?name=<?php echo $thisEntry2?>"><strong> <?php echo $entry2 ?></strong></a>
               <p class="col text-center"><?php echo filesize($thisEntry2)/1000 . "KB" ?></p>
               <p class="col text-end"><?php echo date("F d Y H:i:s", 
-                              filemtime($thisEntry2)); 
+                              filemtime($thisEntry2)); $_SESSION["urlSon"]=$thisEntry2;
                               
                               ?>                       
 
@@ -82,7 +82,7 @@ function openFolder (){
         <h5 class="modal-title" id="exampleModalLabel">New folder Name</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="openFolder.php" method="get">
+      <form action="renameFiles.php" method="get">
             <div class="modal-body">
       
              <div class="input-group input-group-sm mb-3">

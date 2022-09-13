@@ -1,30 +1,26 @@
 <?php
-
+session_start();
 $url=$_SESSION["newsession"];
-    $file_pointer=$_GET["name"];
+$urlSon=$_SESSION["urlSon"];
+    //$file_pointer=$_GET["name"];
    
-
-    function rename(){
-        
-    rename("/test/file1.txt","/home/docs/my_file.txt");
-
-
-    }
-
+    
+    
     if(isset($_GET['newName']) ){ 
         $newName=$_GET['newName'];
             
-     renamej($newName);
+     
      }
+    echo $urlSon;
+    echo $url . DIRECTORY_SEPARATOR .$newName;
+    renamej($urlSon,$url . DIRECTORY_SEPARATOR .$newName);
 
-function renamej($newUrl){  //renames 
-    global $entry2;
-    global $url;
-    global $thisEntry2;
-    echo $entry2;
+function renamej($thisEntry2,$newUrl){  //renames 
+    
     rename($thisEntry2,$newUrl);
-   // header("Location:index.php?name=$url");
- 
+   
  }
+ header("Location:index.php?name=$url");
+ 
 
 ?>
