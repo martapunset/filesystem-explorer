@@ -5,7 +5,7 @@
 function extenFiles ($thisEntry2){
 
 
-    $imgCSV= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoCSV.png' alt=''>";
+    $imgCSV= "<img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='32' height='32' src='logos/docx.png' role='img' aria-label='Placeholder: 32x32' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#007bff'/><text x='50%' y='50%' fill='#007bff' dy='.3em'></text></img>";
     $imgDOC= "<img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='32' height='32' src='logos/docx.png' role='img' aria-label='Placeholder: 32x32' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#007bff'/><text x='50%' y='50%' fill='#007bff' dy='.3em'></text></img>";
     $imgEXE= "<img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='39' height='29' src='logos/exe.png' role='img' aria-label='Placeholder: 32x32' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#007bff'/><text x='50%' y='50%' fill='#007bff' dy='.3em'></text></img>";
     $imgJPG= "<img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='32' height='32' src='logos/jpg.png' role='img' aria-label='Placeholder: 32x32' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#007bff'/><text x='50%' y='50%' fill='#007bff' dy='.3em'></text></img>";

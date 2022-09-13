@@ -36,7 +36,7 @@ function openFolder (){
           <div class=" container  mb-0  border-bottom w-100">
             <div class="row">
             
-              <a class="text-gray-dark col" href="index.php?name=<?php echo $thisEntry2?>"><strong> <?php echo $entry2 ?></strong></a>
+              <a class="text-gray-dark col" name="getname" href="index.php?name=<?php echo $thisEntry2?>" ><strong> <?php echo $entry2 ?></strong></a>
               <p class="col text-center"><?php echo filesize($thisEntry2)/1000 . "KB" ?></p>
               <p class="col text-end"><?php echo date("F d Y H:i:s", 
                               filemtime($thisEntry2)); $_SESSION["urlSon"]=$thisEntry2;
@@ -64,8 +64,19 @@ function openFolder (){
 
 //read files
 
-      echo "alosfdlkansf";
 
+$file = fopen($url, "r")
+
+?>
+<!-- Full screen modal -->
+<div class="modal-fullscreen">
+    
+<?php echo $file;
+
+fclose($file);
+?>
+</div>
+<?php
 
      }
 
