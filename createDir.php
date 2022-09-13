@@ -18,7 +18,7 @@
       
           //  echo 'error';
        
-    header('Location:index.php'. $pathFolder);
+    header('Location:index.php');
 
 
    
