@@ -45,7 +45,7 @@ function openFolder (){
      <a href='deleteFiles.php?name=<?php echo $thisEntry2 ?>' class="me-3 mx-4 fs-6 "><i class="fa-solid fa-trash text-secondary"></i></a>
     <!-- <a href='renameFiles.php?name= echo $thisEntry2 'class="me-4 mx-1 fs-6 "><i class="fa-regular fa-file"></i></a>
                --><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-  modal
+  rename
     </button></p></div>
           </div>
         </div> 
