@@ -33,7 +33,11 @@
         <input class="form-control me-2" id="search" name="search" type="text" placeholder="Type here">
         <input class="btn btn-outline-success" id="submit" type="submit" value="search"></input>
       </form>
+<<<<<<< HEAD
       <h4 class="text-center me-5 "><?php echo actualSession($_SESSION["newsession"]);?></h4>
+=======
+      <h4 class="text-center me-5"><?php echo actualSession($_SESSION["newsession"]);?></h4>
+>>>>>>> e43a4da6dc15e531017f963e9b3b69b841ce84ba
     <a class="me-4 fs-4 "><i class="fa-solid fa-trash text-secondary"></i></a>
     <a class="fs-4 "><i class="fa-regular fa-file"></i></a>
     </div>

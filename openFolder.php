@@ -31,7 +31,11 @@ function openFolder (){
                 
                 ?>      
        <div class="d-flex text-muted pt-3">
+<<<<<<< HEAD
         <div><img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='32' height='32' src='logos/file.png' role='img' aria-label='Placeholder: 32x32' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#007bff'/><text x='50%' y='50%' fill='#007bff' dy='.3em'></text></img></div>
+=======
+       <div><img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='32' height='32' src='logos/file.png' role='img' aria-label='Placeholder: 32x32' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#007bff'/><text x='50%' y='50%' fill='#007bff' dy='.3em'></text></img></div>
+>>>>>>> e43a4da6dc15e531017f963e9b3b69b841ce84ba
           <div class=" container  mb-0  border-bottom w-100">
             <div class="row">
             
