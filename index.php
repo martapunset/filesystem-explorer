@@ -21,7 +21,7 @@
     require_once("openFolder.php");
      require_once("directoriesL.php");
    include("selectFolders.php");
-   //include("updatesession.php")
+  require_once("updatesession.php")
     //$_SESSION["newsession"]=$thisEntry;
     ?>
 
@@ -35,7 +35,7 @@
       </form>
       <h4 class="text-center me-5"><?php echo actualSession($_SESSION["newsession"]);?></h4>
     
-    <a class="fs-4 "><i class="fa-regular fa-file"></i></a>
+    
     </div>
   </div>
 </nav>

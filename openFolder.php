@@ -2,7 +2,7 @@
 
 require_once("index.php");
 require_once("updatesession.php");
-
+$entry2=null;
 
 if(isset($_GET['name']) ){ 
    $url=$_GET['name'];  
@@ -38,40 +38,73 @@ function openFolder (){
               <a class="text-gray-dark col" href="index.php?name=<?php echo $thisEntry2?>"><strong> <?php echo $entry2 ?></strong></a>
               <p class="col text-center"><?php echo filesize($thisEntry2)/1000 . "KB" ?></p>
               <p class="col text-end"><?php echo date("F d Y H:i:s", 
-                              filemtime($thisEntry2));
+                              filemtime($thisEntry2)); 
                               
                               ?>                       
 
-     <a href='deleteFiles.php?name=<?php echo $thisEntry2 ?>' class="me-4 mx-4 fs-6 "><i class="fa-solid fa-trash text-secondary"></i></a></p>
-     </div>
+     <a href='deleteFiles.php?name=<?php echo $thisEntry2 ?>' class="me-3 mx-4 fs-6 "><i class="fa-solid fa-trash text-secondary"></i></a>
+    <!-- <a href='renameFiles.php?name= echo $thisEntry2 'class="me-4 mx-1 fs-6 "><i class="fa-regular fa-file"></i></a>
+               --><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+  modal
+    </button></p></div>
           </div>
-        </div>           
-               <?php    
+        </div> 
+
+               <?php             
               
             } 
             
         }
 
-        //store session in external function
-     //   updateSession($_SESSION["newsession"]); 
-
     }
 
   
-          
-   
-}else{
+    }else{
 
 //read files
 
-echo "alosfdlkansf";
+      echo "alosfdlkansf";
 
+
+     }
 
 }
-}
 
 
 
+
+
+?>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New folder Name</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="openFolder.php" method="get">
+            <div class="modal-body">
+      
+             <div class="input-group input-group-sm mb-3">
+             <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+             <input type="text" name="newName"class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+             </div>
+           </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<?php 
+
+
+?>
 
 
 
