@@ -1,17 +1,19 @@
 <?php
 session_start();
 $url=$_SESSION["newsession"];
-$urlSon=$_SESSION["urlSon"];
+//$urlSon=$_SESSION["urlSon"];
     //$file_pointer=$_GET["name"];
    
-    
-    
+    if(isset($_GET['name1']) ){ 
+       $urlSon=$_GET['name1'];
+    }
     if(isset($_GET['newName']) ){ 
         $newName=$_GET['newName'];
             
      
      }
     echo $urlSon;
+    echo $newName;
     echo $url . DIRECTORY_SEPARATOR .$newName;
     renamej($urlSon,$url . DIRECTORY_SEPARATOR .$newName);
 
@@ -20,7 +22,7 @@ function renamej($thisEntry2,$newUrl){  //renames
     rename($thisEntry2,$newUrl);
    
  }
- header("Location:index.php?name=$url");
+// header("Location:index.php?name=$url");
  
 
 ?>

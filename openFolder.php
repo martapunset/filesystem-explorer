@@ -35,19 +35,19 @@ function openFolder (){
        <div> <?php extenFiles($thisEntry2) ?></div>
           <div class=" container  mb-0  border-bottom w-100">
             <div class="row">
-            
+            <?php echo $_SESSION["urlSon"]=$thisEntry2 ?>
               <a class="text-gray-dark col" href="index.php?name=<?php echo $thisEntry2?>"><strong> <?php echo $entry2 ?></strong></a>
               <p class="col text-center"><?php echo filesize($thisEntry2)/1000 . "KB" ?></p>
               <p class="col text-end"><?php echo date("F d Y H:i:s", 
-                              filemtime($thisEntry2)); $_SESSION["urlSon"]=$thisEntry2;
+                              filemtime($thisEntry2)); //$_SESSION["urlSon"]=$thisEntry2;
                               
                               ?>                       
 
-     <a href='deleteFiles.php?name=<?php echo $thisEntry2 ?>' class="me-3 mx-4 fs-6 "><i class="fa-solid fa-trash text-secondary"></i></a>
-    <!-- <a href='renameFiles.php?name= echo $thisEntry2 'class="me-4 mx-1 fs-6 "><i class="fa-regular fa-file"></i></a>
-               --><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+     <a href='deleteFiles.php?name=<?php echo $thisEntry2; ?>' class="me-3 mx-4 fs-6 "><i class="fa-solid fa-trash text-secondary"></i></a>
+     <a href='renameFiles.php?name1=<?php echo $thisEntry2;?> 'class="me-4 mx-1 fs-6 " class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="fa-regular fa-file"></i></a>
+               <!--<button href='renameFiles.php?name= echo $thisEntry2' type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
   rename
-    </button></p></div>
+    </button> --></p></div>
           </div>
         </div> 
 
