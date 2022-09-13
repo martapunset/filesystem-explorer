@@ -1,0 +1,35 @@
+function eximgFile($rutaArchivo){
+    $imgCSV= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoCSV.png' alt=''>";
+    $imgDOC= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoDOC.png' alt=''>";
+    $imgEXE= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoEXE.png' alt=''>";
+    $imgJPG= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoJPG.png' alt=''>";
+    $imgMP3= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoMP3.png' alt=''>";
+    $imgPDF= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoPDF.png' alt=''>";
+    $imgPNG= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoPNG.png' alt=''>";
+    $imgPPT= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoPPT.png' alt=''>";
+    $imgRAR= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoRAR.png' alt=''>";
+    $imgSVG= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoSVG.png' alt=''>";
+    $imgMP4= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoMP4.png' alt=''>";
+    $imgZIP= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoZIP.png' alt=''>";
+    $imgODT= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoODT.png' alt=''>";
+    $imgTXT= "<img src='../IconosExtensiones/Assets/Iconos/Project/archivoTXT.png' alt=''>";
+    
+        $extension = pathinfo($rutaArchivo, PATHINFO_EXTENSION);
+    
+            switch($extension){
+                case "csv":echo $imgCSV;break;
+                case "doc":echo $imgDOC;break;
+                case "exe":echo $imgEXE;break;
+                case "jpg":echo $imgJPG;break;
+                case "mp3":echo $imgMP3;break;
+                case "mp4":echo $imgMP4;break;
+                case "odt":echo $imgODT;break;
+                case "pdf":echo $imgPDF;break;
+                case "png":echo $imgPNG;break;
+                case "ppt":echo $imgPPT;break;
+                case "rar":echo $imgRAR;break;
+                case "svg":echo $imgSVG;break;
+                case "txt":echo $imgTXT;break;
+                case "zip":echo $imgZIP;break;                 
+            }
+    }

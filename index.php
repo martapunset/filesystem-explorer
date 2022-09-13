@@ -15,7 +15,7 @@
     <link href="sidebars.css" rel="stylesheet">
     
     <?php 
-    session_start();
+    
    
  
     require_once("openFolder.php");
@@ -30,10 +30,10 @@
 <nav class="mx-4 bg-light py-2 pt-4">
   <div class="d-flex mb-3 ">
   <form class="d-flex me-auto " role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" id="search" name="search" type="text" placeholder="Type here">
+        <input class="btn btn-outline-success" id="submit" type="submit" value="search"></input>
       </form>
-      <h4 class="text-center"><?php echo actualSession($_SESSION["newsession"]);?></h4>
+      <h4 class="text-center me-5 "><?php echo actualSession($_SESSION["newsession"]);?></h4>
     <a class="me-4 fs-4 "><i class="fa-solid fa-trash text-secondary"></i></a>
     <a class="fs-4 "><i class="fa-regular fa-file"></i></a>
     </div>
