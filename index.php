@@ -104,37 +104,24 @@
                 </div>
                 <div class="modal-body">
 
-                    <form action="createDir.php" method="get" id="createItems">
-                        <div class="mb-3">
-                          <!--Select dropdown-->
-                     
-                    
-
+                    <form action="createDir.php" method="POST" id="createItems" enctype="multipart/form-data">
+                       <!--Folder name-->
+                        <div class="mb-3">  
                             <label for="formGroupExampleInput" class="form-label">Folder Name</label>
                             <input type="text" class="form-control" id="formGroupExampleInput"
                                 placeholder="folder namer" name="folder-name">
-                             
                         </div>
-                        <div class="modal-footer">
-
-                            <button type="submit" class="btn btn-primary">Create folder</button>
-
-                        </div>
-
-
-
+                        <hr>
+                        <!--Uppload file-->
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input">
+                            <input type="file" name="file-name" class="custom-file-input">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                         </div>
-
-
-                       </div>
-                         <div class="modal-footer">
-                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Add File</button>
-
-                          </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit"  class="btn btn-primary">Uppload</button>
+                        </div>
                      </form>
             </div>
         </div>
