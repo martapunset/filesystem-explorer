@@ -31,8 +31,10 @@ function extenFiles ($thisEntry2){
         case "docx":echo $imgDOC;break;
         case "xlsx":echo $imgEXE;break;
         case "jpg":echo $imgJPG;break;
+        case "JPG":echo $imgJPG;break;
         case "mp3":echo $imgMP3;break;
         case "MP4":echo $imgMP4;break;
+        case "mp4":echo $imgMP4;break;
         case "odt":echo $imgODT;break;
         case "pdf":echo $imgPDF;break;
         case "png":echo $imgPNG;break;
