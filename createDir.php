@@ -1,7 +1,7 @@
 <?php
   session_start();
- $pathFolder=$_SESSION["newsession"];
- $folderName=$_GET['folder-name'];
+ $pathFolder=$_SESSION["newsession"]; //actual path
+ $folderName=$_GET['folder-name']; //name introduced by user in form
 
 
 

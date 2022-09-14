@@ -20,7 +20,7 @@
  
     require_once("openFolder.php");
      require_once("directoriesL.php");
-   include("selectFolders.php");
+   //include("selectFolders.php");
   require_once("updatesession.php")
     //$_SESSION["newsession"]=$thisEntry;
     ?>
@@ -29,8 +29,8 @@
 <header>
 <nav class="mx-4 bg-light py-2 pt-4">
   <div class="d-flex mb-3 ">
-  <form class="d-flex me-auto " role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <form class="d-flex me-auto " role="search" action="search.php">
+        <input class="form-control me-2" name="search-pattern" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
       <h4 class="text-center me-5"><?php echo actualSession($_SESSION["newsession"]);?></h4>
@@ -89,6 +89,18 @@
 
 
     </main>
+    <div class=" my-3 mh-100 bg-body rounded shadow-sm container-sm">
+            <div class="border-bottom pb-2 mb-0 row ">
+                
+               
+                
+                
+            </div>
+            <?php require_once("search.php");?>
+          
+            
+            
+        </div>
     <!--<footer class="footer mt-auto py-3 bg-light ">
   <div class="container">
     <span class="text-muted">footer</span>
