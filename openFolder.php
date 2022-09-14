@@ -3,6 +3,7 @@
 require_once("index.php");
 require_once("updatesession.php");
 require_once("logos.php");
+require_once("openFiles.php");
 $entry2=null;
 
 if(isset($_GET['name']) ){ 
@@ -35,7 +36,7 @@ function openFolder (){
        <div> <?php extenFiles($thisEntry2) ?></div>
           <div class=" container  mb-0  border-bottom w-100">
             <div class="row">
-            <?php echo $_SESSION["urlSon"]=$thisEntry2 ?>
+            <?php #echo $_SESSION["urlSon"]=$thisEntry2 ?>
               <a class="text-gray-dark col" href="index.php?name=<?php echo $thisEntry2?>"><strong> <?php echo $entry2 ?></strong></a>
               <p class="col text-center"><?php echo filesize($thisEntry2)/1000 . "KB" ?></p>
               <p class="col text-end"><?php echo date("F d Y H:i:s", 
@@ -61,19 +62,12 @@ function openFolder (){
 
   
     }else{
-
-//read files
-
-
-$file = fopen($url, "r")
-
 ?>
 <!-- Full screen modal -->
-<div class="modal-fullscreen">
+<div class="modal-fullscreen-sm-down">
     
-<?php echo $file;
-
-fclose($file);
+<?php 
+openFiles($url);
 ?>
 </div>
 <?php
