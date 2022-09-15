@@ -16,12 +16,12 @@ function openFiles ($url) {
             case "jpg":
                 $imageData = base64_encode(file_get_contents($url));
                 $src = 'data: '.mime_content_type($url).';base64,'.$imageData;
-                echo '<img src="' . $src . '" width="500px" height="600px">';
+                echo '<img src="' . $src . '" width="500px">';
                 break;
             case "JPG":
                 $imageData = base64_encode(file_get_contents($url));
                 $src = 'data: '.mime_content_type($url).';base64,'.$imageData;
-                echo '<img src="' . $src . '" width="500px" height="600px">';
+                echo '<img src="' . $src . '" width="500px">';
                 break;
                 case "mp4":
                     $imageData = base64_encode(file_get_contents($url));
